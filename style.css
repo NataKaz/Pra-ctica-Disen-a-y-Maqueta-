@@ -1,0 +1,249 @@
+/* Общие стили */
+
+/* Контейнер .contenedor */
+.contenedor {
+    width: 100%;
+    padding: 20px auto;
+    box-sizing: border-box;
+}
+
+/* Блок 1 */
+#bloque1 {
+    background-color: rgb(154, 195, 154);
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center; /* Центрируем текст по умолчанию */
+}
+
+/* Блок 2 */
+#bloque2 {
+    background-color: #ADD8E6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+/* Блоки 3 и 4 */
+#bloque3, #bloque4 {
+    background-color: #B0C4DE;
+    width: 350px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bloque3 img, #bloque4 img {
+    width: 230px;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#bloque3 p, #bloque4 p {
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    line-height: 4;
+}
+
+/* Блок 5 */
+#bloque5 {
+    background-color: rgb(250, 247, 194);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(134, 210, 163);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 550px; /* Минимальная высота */
+    height: auto; /* Высота зависит от контента */
+    flex-grow: 1; /* Блок растягивается, чтобы занимать доступное пространство */
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow: visible; /* Делаем текст видимым и не скрываем его */
+    margin-bottom: 30px; /* Добавляем отступ снизу для предотвращения наложения */
+}
+
+/* Адаптивность для экранов менее 768px */
+@media (max-width: 768px) {
+    #bloque1 {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта блока 1 на мобильных устройствах */
+        text-align: center; /* Заголовок будет по центру */
+    }
+
+    #bloque5 {
+        min-height: 300px; /* Уменьшаем минимальную высоту для экранов менее 768px */
+        height: auto; /* Высота будет зависеть от контента */
+        font-size: 1.2rem; /* Уменьшаем размер шрифта */
+        margin-bottom: 30px; /* Добавляем отступ снизу */
+    }
+
+    #bloque5 h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Адаптивность для мобильных устройств (менее 480px) */
+@media (max-width: 480px) {
+    #bloque1 {
+        font-size: 1.2rem; /* Уменьшаем размер шрифта блока 1 */
+        text-align: center; /* Центрируем текст на маленьких экранах */
+    }
+
+    #bloque2 {
+        flex-direction: column; /* Ставим блоки друг под другом */
+        padding: 10px;
+    }
+
+    #bloque5 {
+        height: auto; /* Высота зависит от контента */
+        min-height: 250px; /* Минимальная высота блока 5 для мобильных устройств */
+        padding: 15px; /* Меньше отступов для мобильных устройств */
+        margin-bottom: 30px; /* Отступ снизу, чтобы избежать наложения */
+    }
+
+    #bloque5 h3 {
+        font-size: 1.8rem;
+    }
+
+    #bloque6 {
+        text-align: center; /* Центрируем текст в блоке 6 */
+    }
+
+    #footer {
+        font-size: 1rem; /* Уменьшаем размер шрифта футера */
+    }
+}
+
+/* Блок 6 */
+#bloque6 {
+    background-color: rgb(154, 195, 154);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Центрируем текст */
+}
+
+#bloque6 ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#bloque6 li a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+#bloque6 li a:hover {
+    text-decoration: underline;
+}
+
+/* Блок 7 */
+#bloque7 {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+#bloque7 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Футер */
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(250, 247, 194);
+    color: #C69B90;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Italianno', cursive;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+/* Адаптивность для экранов менее 768px */
+@media (max-width: 768px) {
+    /* Блоки 3 и 4 */
+    #bloque3, #bloque4 {
+        width: 90%; /* Уменьшаем ширину блоков */
+        height: auto; /* Автоматическая высота для блоков */
+    }
+
+    #bloque3 img, #bloque4 img {
+        width: 100%; /* Изображения растягиваем по ширине */
+        height: auto; /* Высота изображений подстраивается */
+    }
+
+    /* Блок 5 */
+    #bloque5 {
+        height: auto; /* Высота зависит от контента */
+        min-height: 300px; /* Минимальная высота для экранов менее 768px */
+        font-size: 1.2rem;
+        margin-bottom: 30px; /* Добавляем отступ снизу */
+    }
+
+    #bloque5 h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Адаптивность для мобильных устройств (менее 480px) */
+@media (max-width: 480px) {
+    /* Блок 5 */
+    #bloque5 {
+        height: auto; /* Высота зависит от контента */
+        min-height: 250px; /* Минимальная высота для блока 5 */
+        padding: 10px; /* Меньше отступов для мобильных устройств */
+        margin-bottom: 30px; /* Добавляем отступ снизу */
+    }
+
+    #bloque5 h3 {
+        font-size: 1.8rem;
+    }
+
+    #bloque6 {
+        text-align: center; /* Центрируем текст в блоке 6 */
+    }
+
+    #footer {
+        font-size: 1rem; /* Уменьшаем размер шрифта футера */
+    }
+}
